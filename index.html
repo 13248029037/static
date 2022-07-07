@@ -18,6 +18,19 @@
     //  lark.ready参数为回调函数，在环境准备就绪时触发
     console.info('sdfds')
     alert(JSON.stringify(res))
+    tt.scanCode({
+    scanType: [
+        "barCode",
+        "qrCode"
+    ],
+    barCodeInput: true,
+    success(res) {
+     alert(res)
+    },
+    fail(res) {
+      console.log(`scanCode fail: ${JSON.stringify(res)}`);
+    }
+});
   });
 </script>
 
